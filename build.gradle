@@ -1,0 +1,46 @@
+plugins {
+  id 'com.jfrog.bintray' version '1.3.1'
+  id 'nebula.nebula-release' version '2.2.7'
+}
+
+apply plugin: 'maven-publish'
+apply plugin: 'maven'
+
+group = 'com.netflix.spinnaker'
+description = 'Common dependencies for Spinnaker'
+
+publishing {
+  publications {
+    spinnakerDependencies(MavenPublication) {
+      artifact 'src/spinnaker-dependencies.yml'
+    }
+  }
+}
+
+def prop = { String name ->
+  project.hasProperty(name) ? project.property(name) : ''
+}
+
+bintray {
+  user = prop('bintrayUser')
+  key = prop('bintrayKey') 
+  publications = ['spinnakerDependencies']
+  publish = true
+  dryRun = false
+  pkg {
+    userOrg = 'spinnaker'
+    repo = 'spinnaker'
+    name = project.name
+    desc = prop('description')
+    licenses = ['Apache-2.0']
+    websiteUrl = 'https://github.com/spinnaker/spinnaker-dependencies'
+    vcsUrl = 'https://github.com/spinnaker/spinnaker-dependencies.git'
+    issueTrackerUrl = 'https://github.com/spinnaker/spinnaker-dependencies/issues'
+    attributes = [:]
+    version {
+      name = project.version
+      vcsTag = "v${project.version}"
+      attributes = [:]
+    }
+  }
+}
