@@ -1,6 +1,6 @@
 versions:
 # spinnaker libs
-  kork: "1.51"
+  kork: "1.52.0"
   redbatch: "0.4"
 # third party
   akka: "2.3.9"
