@@ -1,41 +1,36 @@
 versions:
 # spinnaker libs
-  amazoncomponents: "0.11.7"
-  amos: "0.29"
-  cats: "0.19.0"
-  kork: "1.48"
+  kork: "1.51"
   redbatch: "0.4"
 # third party
   akka: "2.3.9"
   astyanax: "2.0.2"
-  aws: "1.9.33"
-  awsObjectMapper: "1.9.33.1"
+  aws: "1.10.5.1"
+  awsObjectMapper: "1.10.5.0"
   batch: "3.0.4.RELEASE"
   cglib: "3.1"
-  eddaClient: "1.9.16.2"
+  clouddriver: "0.135"
   eureka: "1.1.159"
   frigga: "0.13"
-  googleHttp: "1.18.0-rc"
-  googleCompute: "v1-rev40-1.19.0"
-  googleReplicapool: "v1beta2-rev1-1.19.0"
-  googleResourceviews: "v1beta2-rev3-1.19.0"
+  googleCompute: "v1-rev74-1.20.0"
+  googleHttp: "1.20.0"
   groovy: "2.3.11"
   guava: "18.0"
   hamcrest: "1.3"
   httpclient: "4.3.6"
   httpcore: "4.3.3"
-  jackson: "2.4.5"
-  jedis: "2.6.2"
+  jackson: "2.5.3"
+  jedis: "2.7.3"
   junit: "4.12"
   lombok: "1.16.4"
   objenesis: "2.1"
   okHttp: "2.2.0"
   redisEmbedded: "0.6"
   retrofit: "1.9.0"
-  rxJava: "1.0.8"
+  rxJava: "1.0.14"
   slf4j: "1.7.10"
   snappy: "1.1.1.6"
-  spectator: "0.18"
+  spectator: "0.31.0"
   spock: "1.0-groovy-2.3"
   spring: "4.1.7.RELEASE"
   springBoot: "1.2.5.RELEASE"
@@ -52,8 +47,8 @@ groups:
       - akkaActorTests
   amazon:
     compile:
-      - amazoncomponents
       - aws
+      - awsObjectMapper
       - httpclient
       - httpcore
   awsCreds:
@@ -71,22 +66,9 @@ groups:
       - astyanaxCql
       - astyanaxCassandra
       - astyanaxThrift
-  cats:
-    compile:
-      - catsCore
-      - catsRedis
-  gceApi:
-    compile:
-      - googleCompute
-      - googleReplicapool
-      - googleResourceviews
-      - googleHttp
   google:
     compile:
-      - amosGce
       - googleCompute
-      - googleReplicapool
-      - googleResourceviews
       - googleHttp
   jackson:
     compile:
@@ -130,15 +112,9 @@ groups:
 
 dependencies:
 # spinnaker libs
-  amazoncomponents: "com.netflix.amazoncomponents:amazoncomponents:${versions.amazoncomponents}"
-  amos: "com.netflix.spinnaker:amos-core:${versions.amos}"
-  amosAws: "com.netflix.spinnaker:amos-aws:${versions.amos}"
-  amosGce: "com.netflix.spinnaker:amos-gce:${versions.amos}"
-  catsCore: "com.netflix.spinnaker.cats:cats-core:${versions.cats}"
-  catsRedis: "com.netflix.spinnaker.cats:cats-redis:${versions.cats}"
+  clouddriverSecurity: "com.netflix.spinnaker.clouddriver:clouddriver-security:${versions.clouddriver}"
   kork: "com.netflix.spinnaker.kork:kork-core:${versions.kork}"
   korkCassandra: "com.netflix.spinnaker.kork:kork-cassandra:${versions.kork}"
-  korkJedis: "com.netflix.spinnaker.kork:kork-jedis:${versions.kork}"
   korkJedisTest: "com.netflix.spinnaker.kork:kork-jedis-test:${versions.kork}"
   korkSecurity: "com.netflix.spinnaker.kork:kork-security:${versions.kork}"
   korkSwagger: "com.netflix.spinnaker.kork:kork-swagger:${versions.kork}"
@@ -166,13 +142,10 @@ dependencies:
   bootWeb: "org.springframework.boot:spring-boot-starter-web:${versions.springBoot}"
   springSecurityCore: "org.springframework.security:spring-security-core:${versions.springSecurity}"
   cglib: "cglib:cglib-nodep:${versions.cglib}"
-  eddaClient: "com.netflix.edda-client:edda-client:${versions.eddaClient}"
   eurekaClient: "com.netflix.eureka:eureka-client:${versions.eureka}"
   frigga: "com.netflix.frigga:frigga:${versions.frigga}"
   googleCompute: "com.google.apis:google-api-services-compute:${versions.googleCompute}"
   googleHttp: "com.google.http-client:google-http-client-jackson2:${versions.googleHttp}"
-  googleReplicapool: "com.google.apis:google-api-services-replicapool:${versions.googleReplicapool}"
-  googleResourceviews: "com.google.apis:google-api-services-resourceviews:${versions.googleResourceviews}"
   groovy: "org.codehaus.groovy:groovy-all:${versions.groovy}"
   guava: "com.google.guava:guava:${versions.guava}"
   hamcrestCore: "org.hamcrest:hamcrest-core:${versions.hamcrest}"
@@ -190,12 +163,13 @@ dependencies:
   objenesis: "org.objenesis:objenesis:${versions.objenesis}"
   okHttp: "com.squareup.okhttp:okhttp:${versions.okHttp}"
   okHttpUrlconnection: "com.squareup.okhttp:okhttp-urlconnection:${versions.okHttp}"
-  redisEmbedded: "com.orange.redis-embedded:embedded-redis:${versions.redisEmbedded}"
+  redisEmbedded: "com.github.kstyrc:embedded-redis:${versions.redisEmbedded}"
   retrofit: "com.squareup.retrofit:retrofit:${versions.retrofit}"
   retrofitJackson: "com.squareup.retrofit:converter-jackson:${versions.retrofit}"
   retrofitMock: "com.squareup.retrofit:retrofit-mock:${versions.retrofit}"
   rxJava: "io.reactivex:rxjava:${versions.rxJava}"
   spectatorApi: "com.netflix.spectator:spectator-api:${versions.spectator}"
+  spectatorAws: "com.netflix.spectator:spectator-ext-aws:${versions.spectator}"
   slf4j: "org.slf4j:jcl-over-slf4j:${versions.slf4j}"
   slf4jApi: "org.slf4j:slf4j-api:${versions.slf4j}"
   slf4jSimple: "org.slf4j:slf4j-simple:${versions.slf4j}"
