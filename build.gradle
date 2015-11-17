@@ -49,3 +49,5 @@ bintray {
     }
   }
 }
+
+tasks.release.dependsOn(bintrayUpload)
