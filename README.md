@@ -8,6 +8,6 @@ The ``src/spinnaker-dependencies.yml`` is published as an artifact to the bintra
 To generate a new version run:
 
 ````
-./gradlew final bintrayUpload
+./gradlew final release
 ````
 
