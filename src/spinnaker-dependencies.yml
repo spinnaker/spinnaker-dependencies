@@ -2,6 +2,7 @@ versions:
 # spinnaker libs
   kork: "1.52.0"
   redbatch: "0.4"
+  clouddriver: "1.23.0"
 # third party
   akka: "2.3.9"
   astyanax: "2.0.2"
@@ -9,7 +10,6 @@ versions:
   awsObjectMapper: "1.10.5.0"
   batch: "3.0.4.RELEASE"
   cglib: "3.1"
-  clouddriver: "0.135"
   eureka: "1.1.159"
   frigga: "0.13"
   googleCompute: "v1-rev74-1.20.0"
