@@ -1,7 +1,7 @@
 versions:
 # spinnaker libs
   kork: "1.52.0"
-  redbatch: "0.4"
+  scheduledActions: "0.35.0"
   clouddriver: "1.23.0"
 # third party
   akka: "2.3.9"
@@ -109,6 +109,13 @@ groups:
     testCompile:
       - groovy
       - spock
+  scheduledActions:
+    compile:
+      - scheduledActionsCore
+      - scheduledActionsCassandra
+      - scheduledActionsClustered
+      - scheduledActionsWeb
+
 
 dependencies:
 # spinnaker libs
@@ -119,7 +126,10 @@ dependencies:
   korkSecurity: "com.netflix.spinnaker.kork:kork-security:${versions.kork}"
   korkSwagger: "com.netflix.spinnaker.kork:kork-swagger:${versions.kork}"
   korkWeb: "com.netflix.spinnaker.kork:kork-web:${versions.kork}"
-  redbatch: "com.netflix:redbatch:${versions.redbatch}"
+  scheduledActionsCore: "com.netflix.scheduledactions:scheduled-actions-core:${versions.scheduledActions}"
+  scheduledActionsCassandra: "com.netflix.scheduledactions:scheduled-actions-cassandra:${versions.scheduledActions}"
+  scheduledActionsClustered: "com.netflix.scheduledactions:scheduled-actions-clustered:${versions.scheduledActions}"
+  scheduledActionsWeb: "com.netflix.scheduledactions:scheduled-actions-web:${versions.scheduledActions}"
 # third party
   akkaCore: "com.typesafe.akka:akka-actor_2.11:${versions.akka}"
   akkaPersistence: "com.typesafe.akka:akka-persistence-experimental_2.11:${versions.akka}"
