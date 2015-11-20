@@ -1,5 +1,6 @@
 Spinnaker Dependencies
 ======================
+[![Build Status](https://api.travis-ci.org/spinnaker/spinnaker-dependencies.svg?branch=master)](https://travis-ci.org/spinnaker/spinnaker-dependencies)
 
 Manages common dependencies for Spinnaker components.
 
