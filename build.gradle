@@ -40,13 +40,19 @@ bintray {
     licenses = ['Apache-2.0']
     websiteUrl = 'https://github.com/spinnaker/spinnaker-dependencies'
     vcsUrl = 'https://github.com/spinnaker/spinnaker-dependencies.git'
-    issueTrackerUrl = 'https://github.com/spinnaker/spinnaker-dependencies/issues'
+    issueTrackerUrl = 'https://github.com/spinnaker/spinnaker/issues'
     attributes = [:]
     version {
       name = project.version
       vcsTag = "v${project.version}"
       attributes = [:]
     }
+  }
+}
+
+project.gradle.taskGraph.whenReady { graph ->
+  bintrayUpload.onlyIf {
+    graph.hasTask(':final') || graph.hasTask(':candidate')
   }
 }
 
