@@ -1,6 +1,6 @@
 versions:
 # spinnaker libs
-  kork: "1.52.0"
+  kork: "1.54.0"
   scheduledActions: "0.35.0"
   clouddriver: "1.23.0"
 # third party
