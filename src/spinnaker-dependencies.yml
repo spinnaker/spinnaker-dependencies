@@ -1,16 +1,17 @@
 versions:
 # spinnaker libs
   kork: "1.56.0"
-  scheduledActions: "0.35.0"
-  clouddriver: "1.23.0"
+  scheduledActions: "0.36.0"
+  clouddriver: "1.35.0"
 # third party
   akka: "2.3.9"
-  astyanax: "2.0.2"
-  aws: "1.10.5.1"
-  awsObjectMapper: "1.10.5.0"
+  archaius: "0.7.3"
+  astyanax: "3.8.0"
+  aws: "1.10.27"
+  awsObjectMapper: "1.10.27.0"
   batch: "3.0.4.RELEASE"
-  cglib: "3.1"
-  eureka: "1.1.159"
+  cglib: "3.2.0"
+  eureka: "1.3.4"
   frigga: "0.13"
   googleCompute: "v1-rev74-1.20.0"
   googleHttp: "1.20.0"
@@ -23,14 +24,14 @@ versions:
   jedis: "2.7.3"
   junit: "4.12"
   lombok: "1.16.4"
-  objenesis: "2.1"
+  objenesis: "2.2"
   okHttp: "2.2.0"
   redisEmbedded: "0.6"
   retrofit: "1.9.0"
-  rxJava: "1.0.14"
+  rxJava: "1.0.16"
   slf4j: "1.7.10"
   snappy: "1.1.1.6"
-  spectator: "0.31.0"
+  spectator: "0.33.0"
   spock: "1.0-groovy-2.3"
   spring: "4.1.7.RELEASE"
   springBoot: "1.2.5.RELEASE"
@@ -64,6 +65,7 @@ groups:
       - astyanaxCql
       - astyanaxCassandra
       - astyanaxThrift
+      - astyanaxTest
   google:
     compile:
       - googleCompute
@@ -133,9 +135,11 @@ dependencies:
   akkaCore: "com.typesafe.akka:akka-actor_2.11:${versions.akka}"
   akkaPersistence: "com.typesafe.akka:akka-persistence-experimental_2.11:${versions.akka}"
   akkaActorTests: "com.typesafe.akka:akka-actor-tests_2.11:${versions.akka}"
+  archaiusCore: "com.netflix.archaius:archaius-core:${versions.archaius}"
   astyanaxCassandra: "com.netflix.astyanax:astyanax-cassandra:${versions.astyanax}"
   astyanaxCql: "com.netflix.astyanax:astyanax-cql:${versions.astyanax}"
   astyanaxThrift: "com.netflix.astyanax:astyanax-thrift:${versions.astyanax}"
+  astyanaxTest: "com.netflix.astyanax:astyanax-test:${versions.astyanax}"
   aws: "com.amazonaws:aws-java-sdk:${versions.aws}"
   awsCore: "com.amazonaws:aws-java-sdk-core:${versions.aws}"
   awsEc2: "com.amazonaws:aws-java-sdk-ec2:${versions.aws}"
