@@ -183,6 +183,8 @@ dependencies:
   rxJava: "io.reactivex:rxjava:${versions.rxJava}"
   spectatorApi: "com.netflix.spectator:spectator-api:${versions.spectator}"
   spectatorAws: "com.netflix.spectator:spectator-ext-aws:${versions.spectator}"
+  spectatorGc: "com.netflix.spectator:spectator-ext-gc:${versions.spectator}"
+  spectatorJvm: "com.netflix.spectator:spectator-ext-jvm:${versions.spectator}"
   slf4j: "org.slf4j:jcl-over-slf4j:${versions.slf4j}"
   slf4jApi: "org.slf4j:slf4j-api:${versions.slf4j}"
   slf4jSimple: "org.slf4j:slf4j-simple:${versions.slf4j}"
