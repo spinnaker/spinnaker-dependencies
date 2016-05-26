@@ -13,7 +13,7 @@ versions:
   cglib: "3.2.0"
   eureka: "1.4.6"
   frigga: "0.14.0"
-  googleCompute: "v1-rev94-1.21.0"
+  googleCompute: "alpha-rev5-1.22.0"
   googleHttp: "1.20.0"
   groovy: "2.3.11"
   guava: "18.0"
