@@ -12,7 +12,7 @@ versions:
   batch: "3.0.4.RELEASE"
   cglib: "3.2.0"
   eureka: "1.4.6"
-  frigga: "0.14.0"
+  frigga: "0.15.0"
   googleCompute: "alpha-rev5-1.22.0"
   googleHttp: "1.20.0"
   groovy: "2.3.11"
