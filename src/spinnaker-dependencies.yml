@@ -33,7 +33,7 @@ versions:
   slf4j: "1.7.10"
   snappy: "1.1.1.6"
   spectator: "0.36.0"
-  spock: "1.0-groovy-2.3"
+  spock: "1.1-groovy-2.3-rc-1"
   spring: "4.1.7.RELEASE"
   springBoot: "1.2.5.RELEASE"
   springSecurity: "3.2.8.RELEASE"
