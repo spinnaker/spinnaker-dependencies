@@ -1,5 +1,6 @@
 versions:
 # spinnaker libs
+  fiat: "0.3.0"
   kork: "1.67.0"
   scheduledActions: "0.37.0"
   clouddriver: "1.35.0"
@@ -67,6 +68,15 @@ groups:
       - astyanaxCassandra
       - astyanaxThrift
       - astyanaxTest
+  fiat:
+    compile:
+      - fiat
+      - bootActuator
+      - bootWeb
+      - bootDataRest
+      - springSecurityConfig
+      - springSecurityCore
+      - springSecurityWeb
   google:
     compile:
       - googleCompute
@@ -122,6 +132,7 @@ groups:
 dependencies:
 # spinnaker libs
   clouddriverSecurity: "com.netflix.spinnaker.clouddriver:clouddriver-security:${versions.clouddriver}"
+  fiat: "com.netflix.spinnaker.fiat:fiat-api:${versions.fiat}"
   kork: "com.netflix.spinnaker.kork:kork-core:${versions.kork}"
   korkCassandra: "com.netflix.spinnaker.kork:kork-cassandra:${versions.kork}"
   korkJedisTest: "com.netflix.spinnaker.kork:kork-jedis-test:${versions.kork}"
@@ -155,7 +166,6 @@ dependencies:
   bootDataRest: "org.springframework.boot:spring-boot-starter-data-rest:${versions.springBoot}"
   bootTest: "org.springframework.boot:spring-boot-starter-test:${versions.springBoot}"
   bootWeb: "org.springframework.boot:spring-boot-starter-web:${versions.springBoot}"
-  springSecurityCore: "org.springframework.security:spring-security-core:${versions.springSecurity}"
   cglib: "cglib:cglib-nodep:${versions.cglib}"
   commonsExec: "org.apache.commons:commons-exec:${versions.commonsExec}"
   eurekaClient: "com.netflix.eureka:eureka-client:${versions.eureka}"
@@ -199,4 +209,7 @@ dependencies:
   spockSpring: "org.spockframework:spock-spring:${versions.spock}"
   springBeans: "org.springframework:spring-beans:${versions.spring}"
   springContext: "org.springframework:spring-context:${versions.spring}"
+  springSecurityConfig: "org.springframework.security:spring-security-config:${versions.springSecurity}"
+  springSecurityCore: "org.springframework.security:spring-security-core:${versions.springSecurity}"
+  springSecurityWeb: "org.springframework.security:spring-security-web:${versions.springSecurity}"
   springTest: "org.springframework:spring-test:${versions.spring}"
