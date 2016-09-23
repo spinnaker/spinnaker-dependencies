@@ -57,3 +57,41 @@ project.gradle.taskGraph.whenReady { graph ->
 }
 
 tasks.release.dependsOn(bintrayUpload)
+
+
+task('updateDependencies', description: "Rebuilds spinnaker-dependencies.yml based on Spring's platform BOM.") << {
+
+  /*
+   * Use http://platform.spring.io/platform/ as the basis for making suggested changes to spinnaker-dependencies.yml
+   */
+
+  def platformVersion = "1.1.5.RELEASE" // This version contains Spring Boot 1.2.8.RELEASE
+
+  def repo = (platformVersion.endsWith('-BUILD-SNAPSHOT')) ?
+          'https://repo.spring.io/snapshot' :
+          (platformVersion.contains('-RC') || platformVersion.contains('-M')) ?
+                  'https://repo.spring.io/milestone' :
+                  'https://repo.spring.io/release'
+  def group = "io.spring.platform".replaceAll('\\.', '/')
+  def artifact = "platform-bom"
+  def path = "${repo}/${group}/${artifact}/${platformVersion}/${artifact}-${platformVersion}.properties"
+
+  println "Fetching ${platformVersion} platform from ${path}..."
+
+  Properties props = new Properties()
+  path.toURL().openStream().withStream { propertyStream ->
+    props.load(propertyStream)
+  }
+
+  def updatedListOfDeps = new File('src/spinnaker-dependencies.template').text
+
+  println "Updating version settings based on ${platformVersion}..."
+
+  props.keySet().each { lib ->
+    updatedListOfDeps = updatedListOfDeps.replaceAll('\\{\\{' + lib + '}}', props.getProperty(lib))
+  }
+
+  new File('src/spinnaker-dependencies.yml').withWriter { writer ->
+    writer.write(updatedListOfDeps)
+  }
+}
