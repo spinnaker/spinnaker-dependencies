@@ -97,6 +97,7 @@ task('updateDependencies', description: "Rebuilds spinnaker-dependencies.yml bas
 }
 
 tasks.build.dependsOn(updateDependencies)
+tasks.bintrayUpload.dependsOn(build)
 tasks.publishToMavenLocal.dependsOn(build)
 tasks.release.dependsOn(updateDependencies, bintrayUpload)
 
