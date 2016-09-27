@@ -17,7 +17,7 @@ description = 'Common dependencies for Spinnaker'
 publishing {
   publications {
     spinnakerDependencies(MavenPublication) {
-      artifact 'src/spinnaker-dependencies.yml'
+      artifact 'build/spinnaker-dependencies.yml'
     }
   }
 }
@@ -56,8 +56,6 @@ project.gradle.taskGraph.whenReady { graph ->
   }
 }
 
-tasks.release.dependsOn(bintrayUpload)
-
 
 task('updateDependencies', description: "Rebuilds spinnaker-dependencies.yml based on Spring's platform BOM.") << {
 
@@ -83,7 +81,7 @@ task('updateDependencies', description: "Rebuilds spinnaker-dependencies.yml bas
     props.load(propertyStream)
   }
 
-  def updatedListOfDeps = new File('src/spinnaker-dependencies.template').text
+  def updatedListOfDeps = project.file('src/spinnaker-dependencies.template').text
 
   println "Updating version settings based on ${platformVersion}..."
 
@@ -91,7 +89,15 @@ task('updateDependencies', description: "Rebuilds spinnaker-dependencies.yml bas
     updatedListOfDeps = updatedListOfDeps.replaceAll('\\{\\{' + lib + '}}', props.getProperty(lib))
   }
 
-  new File('src/spinnaker-dependencies.yml').withWriter { writer ->
+  project.file('build/').mkdirs()
+
+  project.file('build/spinnaker-dependencies.yml').withWriter { writer ->
     writer.write(updatedListOfDeps)
   }
 }
+
+tasks.build.dependsOn(updateDependencies)
+tasks.publishToMavenLocal.dependsOn(build)
+tasks.release.dependsOn(updateDependencies, bintrayUpload)
+
+
