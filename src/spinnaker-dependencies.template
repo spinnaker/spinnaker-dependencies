@@ -1,7 +1,7 @@
 versions:
 # spinnaker libs
-  fiat: "0.3.0"
-  kork: "1.68.0"
+  fiat: "0.11.0"
+  kork: "1.69.0"
   scheduledActions: "0.37.0"
   clouddriver: "1.35.0"
 # third party
@@ -20,14 +20,14 @@ versions:
   googleHttp: "1.20.0"
   googleMonitoring: "v3-rev6-1.22.0"
   googleStorage: "v1-rev71-1.22.0"
-  groovy: "{{org.codehaus.groovy:groovy}}"
+  groovy: "2.3.11" # "{{org.codehaus.groovy:groovy}}"
   guava: "{{com.google.guava:guava}}"
   hamcrest: "{{org.hamcrest:hamcrest-core}}"
   httpclient: "{{org.apache.httpcomponents:httpclient}}"
   #httpcore bom: "{{org.apache.httpcomponents:httpcore}}"
   httpcore: "4.3.3"
-  jackson: "{{com.fasterxml.jackson.core:jackson-core}}"
-  jedis: "{{redis.clients:jedis}}"
+  jackson: "2.5.3" # "{{com.fasterxml.jackson.core:jackson-core}}"
+  jedis: "2.7.3" # "{{redis.clients:jedis}}"
   junit: "{{junit:junit}}"
   lombok: "{{org.projectlombok:lombok}}"
   objenesis: "{{org.objenesis:objenesis}}"
