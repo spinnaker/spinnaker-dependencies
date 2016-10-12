@@ -1,7 +1,7 @@
 versions:
 # spinnaker libs
   fiat: "0.11.0"
-  kork: "1.71.0"
+  kork: "1.72.0"
   scheduledActions: "0.37.0"
   clouddriver: "1.35.0"
 # third party
@@ -20,7 +20,7 @@ versions:
   googleHttp: "1.20.0"
   googleMonitoring: "v3-rev6-1.22.0"
   googleStorage: "v1-rev71-1.22.0"
-  groovy: "2.3.11" # "{{org.codehaus.groovy:groovy}}"
+  groovy: "2.4.7" # "{{org.codehaus.groovy:groovy}}"
   guava: "{{com.google.guava:guava}}"
   hamcrest: "{{org.hamcrest:hamcrest-core}}"
   httpclient: "{{org.apache.httpcomponents:httpclient}}"
@@ -29,7 +29,7 @@ versions:
   jackson: "2.5.3" # "{{com.fasterxml.jackson.core:jackson-core}}"
   jedis: "2.7.3" # "{{redis.clients:jedis}}"
   junit: "{{junit:junit}}"
-  lombok: "{{org.projectlombok:lombok}}"
+  lombok: "1.16.10" # "{{org.projectlombok:lombok}}"
   objenesis: "{{org.objenesis:objenesis}}"
   #okhttp bom: "{{com.squareup.okhttp:okhttp}}"
   okHttp: "2.7.0"
@@ -40,7 +40,7 @@ versions:
   snappy: "{{org.xerial.snappy:snappy-java}}"
   spectator: "0.41.0"
   #spock bom: "{{org.spockframework:spock-core}}"
-  spock: "1.1-groovy-2.3-rc-1"
+  spock: "1.1-groovy-2.4-rc-2"
   spring: "{{org.springframework:spring-core}}"
   springBoot: "{{org.springframework.boot:spring-boot}}"
   springSecurity: "{{org.springframework.security:spring-security-core}}"
