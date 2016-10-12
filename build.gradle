@@ -14,6 +14,10 @@ apply plugin: 'maven'
 group = 'com.netflix.spinnaker'
 description = 'Common dependencies for Spinnaker'
 
+release {
+  defaultVersionStrategy = nebula.plugin.release.NetflixOssStrategies.SNAPSHOT
+}
+
 publishing {
   publications {
     spinnakerDependencies(MavenPublication) {
@@ -100,5 +104,4 @@ tasks.build.dependsOn(updateDependencies)
 tasks.bintrayUpload.dependsOn(build)
 tasks.publishToMavenLocal.dependsOn(build)
 tasks.release.dependsOn(updateDependencies, bintrayUpload)
-
 
