@@ -3,7 +3,7 @@ versions:
   fiat: "0.11.0"
   kork: "1.72.0"
   scheduledActions: "0.37.0"
-  clouddriver: "1.35.0"
+  clouddriver: "1.388.0"
 # third party
   akka: "2.3.9"
   archaius: "0.7.3"
