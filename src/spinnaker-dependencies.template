@@ -1,7 +1,7 @@
 versions:
 # spinnaker libs
   fiat: "0.11.0"
-  kork: "1.72.0"
+  kork: "1.73.0"
   scheduledActions: "0.37.0"
   clouddriver: "1.388.0"
 # third party
@@ -18,8 +18,8 @@ versions:
   frigga: "0.17.0"
   googleCompute: "alpha-rev20-1.22.0"
   googleHttp: "1.20.0"
-  googleMonitoring: "v3-rev6-1.22.0"
-  googleStorage: "v1-rev71-1.22.0"
+  googleMonitoring: "v3-rev11-1.22.0"
+  googleStorage: "v1-rev86-1.22.0"
   groovy: "2.4.7" # "{{org.codehaus.groovy:groovy}}"
   guava: "{{com.google.guava:guava}}"
   hamcrest: "{{org.hamcrest:hamcrest-core}}"
@@ -145,6 +145,7 @@ dependencies:
   korkCassandra: "com.netflix.spinnaker.kork:kork-cassandra:${versions.kork}"
   korkJedisTest: "com.netflix.spinnaker.kork:kork-jedis-test:${versions.kork}"
   korkSecurity: "com.netflix.spinnaker.kork:kork-security:${versions.kork}"
+  korkStackdriver: "com.netflix.spinnaker.kork:kork-stackdriver:${versions.kork}"
   korkSwagger: "com.netflix.spinnaker.kork:kork-swagger:${versions.kork}"
   korkHystrix: "com.netflix.spinnaker.kork:kork-hystrix:${versions.kork}"
   korkWeb: "com.netflix.spinnaker.kork:kork-web:${versions.kork}"
@@ -211,6 +212,7 @@ dependencies:
   spectatorGc: "com.netflix.spectator:spectator-ext-gc:${versions.spectator}"
   spectatorJvm: "com.netflix.spectator:spectator-ext-jvm:${versions.spectator}"
   spectatorReg: "com.netflix.spectator:spectator-reg-metrics3:${versions.spectator}"
+  spectatorWebSpring: "com.netflix.spectator:spectator-web-spring:${versions.spectator}"
   slf4j: "org.slf4j:jcl-over-slf4j:${versions.slf4j}"
   slf4jApi: "org.slf4j:slf4j-api:${versions.slf4j}"
   slf4jSimple: "org.slf4j:slf4j-simple:${versions.slf4j}"
