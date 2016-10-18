@@ -139,6 +139,7 @@ groups:
 dependencies:
 # spinnaker libs
   clouddriverSecurity: "com.netflix.spinnaker.clouddriver:clouddriver-security:${versions.clouddriver}"
+  clouddriverKubernetes: "com.netflix.spinnaker.clouddriver:clouddriver-kubernetes:${versions.clouddriver}"
   fiat: "com.netflix.spinnaker.fiat:fiat-api:${versions.fiat}"
   kork: "com.netflix.spinnaker.kork:kork-core:${versions.kork}"
   korkCassandra: "com.netflix.spinnaker.kork:kork-cassandra:${versions.kork}"
