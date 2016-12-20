@@ -3,7 +3,7 @@ versions:
   fiat: "0.11.0"
   kork: "1.82.0"
   scheduledActions: "0.38.0"
-  clouddriver: "1.388.0"
+  clouddriver: "1.472.0"
 # third party
   akka: "2.3.9"
   archaius: "0.7.3"
@@ -141,6 +141,8 @@ dependencies:
 # spinnaker libs
   clouddriverSecurity: "com.netflix.spinnaker.clouddriver:clouddriver-security:${versions.clouddriver}"
   clouddriverKubernetes: "com.netflix.spinnaker.clouddriver:clouddriver-kubernetes:${versions.clouddriver}"
+  clouddriverGoogle: "com.netflix.spinnaker.clouddriver:clouddriver-google:${versions.clouddriver}"
+  clouddriverDocker: "com.netflix.spinnaker.clouddriver:clouddriver-docker:${versions.clouddriver}"
   fiat: "com.netflix.spinnaker.fiat:fiat-api:${versions.fiat}"
   kork: "com.netflix.spinnaker.kork:kork-core:${versions.kork}"
   korkCassandra: "com.netflix.spinnaker.kork:kork-cassandra:${versions.kork}"
