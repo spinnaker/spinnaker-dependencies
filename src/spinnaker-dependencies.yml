@@ -144,9 +144,14 @@ groups:
 dependencies:
 # spinnaker libs
   clouddriverSecurity: "com.netflix.spinnaker.clouddriver:clouddriver-security:${versions.clouddriver}"
-  clouddriverKubernetes: "com.netflix.spinnaker.clouddriver:clouddriver-kubernetes:${versions.clouddriver}"
-  clouddriverGoogle: "com.netflix.spinnaker.clouddriver:clouddriver-google:${versions.clouddriver}"
+  clouddriverAws: "com.netflix.spinnaker.clouddriver:clouddriver-aws:${versions.clouddriver}"
+  clouddriverAzure: "com.netflix.spinnaker.clouddriver:clouddriver-azure:${versions.clouddriver}"
+  clouddriverCf: "com.netflix.spinnaker.clouddriver:clouddriver-cf:${versions.clouddriver}"
   clouddriverDocker: "com.netflix.spinnaker.clouddriver:clouddriver-docker:${versions.clouddriver}"
+  clouddriverGoogle: "com.netflix.spinnaker.clouddriver:clouddriver-google:${versions.clouddriver}"
+  clouddriverKubernetes: "com.netflix.spinnaker.clouddriver:clouddriver-kubernetes:${versions.clouddriver}"
+  clouddriverOpenstack: "com.netflix.spinnaker.clouddriver:clouddriver-openstack:${versions.clouddriver}"
+  clouddriverTitus: "com.netflix.spinnaker.clouddriver:clouddriver-titus:${versions.clouddriver}"
   fiat: "com.netflix.spinnaker.fiat:fiat-api:${versions.fiat}"
   kork: "com.netflix.spinnaker.kork:kork-core:${versions.kork}"
   korkCassandra: "com.netflix.spinnaker.kork:kork-cassandra:${versions.kork}"
