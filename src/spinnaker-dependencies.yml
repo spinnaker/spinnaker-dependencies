@@ -4,6 +4,7 @@ versions:
   kork: "1.83.0"
   scheduledActions: "0.38.0"
   clouddriver: "1.513.0"
+  front50: "1.72.0"
 # third party
   akka: "2.3.9"
   archaius: "0.7.3"
@@ -154,6 +155,8 @@ dependencies:
   clouddriverOpenstack: "com.netflix.spinnaker.clouddriver:clouddriver-openstack:${versions.clouddriver}"
   clouddriverTitus: "com.netflix.spinnaker.clouddriver:clouddriver-titus:${versions.clouddriver}"
   fiat: "com.netflix.spinnaker.fiat:fiat-api:${versions.fiat}"
+  front50Gcs: "com.netflix.spinnaker.front50:front50-gcs:${versions.front50}"
+  front50S3: "com.netflix.spinnaker.front50:front50-s3:${versions.front50}"
   kork: "com.netflix.spinnaker.kork:kork-core:${versions.kork}"
   korkCassandra: "com.netflix.spinnaker.kork:kork-cassandra:${versions.kork}"
   korkJedisTest: "com.netflix.spinnaker.kork:kork-jedis-test:${versions.kork}"
