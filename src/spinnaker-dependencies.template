@@ -1,7 +1,7 @@
 versions:
 # spinnaker libs
   fiat: "0.11.0"
-  kork: "1.83.0"
+  kork: "1.84.0"
   scheduledActions: "0.38.0"
   clouddriver: "1.513.0"
   front50: "1.72.0"
@@ -9,8 +9,8 @@ versions:
   akka: "2.3.9"
   archaius: "0.7.3"
   astyanax: "3.8.0"
-  aws: "1.11.41"
-  awsObjectMapper: "1.11.41"
+  aws: "1.11.83"
+  awsObjectMapper: "1.11.83"
   #batch bom: "{{org.springframework.batch:spring-batch-core}}"
   batch: "3.0.4.RELEASE"
   cglib: "3.2.0"
