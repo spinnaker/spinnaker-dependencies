@@ -151,6 +151,7 @@ dependencies:
   clouddriverCf: "com.netflix.spinnaker.clouddriver:clouddriver-cf:${versions.clouddriver}"
   clouddriverDocker: "com.netflix.spinnaker.clouddriver:clouddriver-docker:${versions.clouddriver}"
   clouddriverGoogle: "com.netflix.spinnaker.clouddriver:clouddriver-google:${versions.clouddriver}"
+  clouddriverGoogleCommon: "com.netflix.spinnaker.clouddriver:clouddriver-google-common:${versions.clouddriver}"
   clouddriverKubernetes: "com.netflix.spinnaker.clouddriver:clouddriver-kubernetes:${versions.clouddriver}"
   clouddriverOpenstack: "com.netflix.spinnaker.clouddriver:clouddriver-openstack:${versions.clouddriver}"
   clouddriverTitus: "com.netflix.spinnaker.clouddriver:clouddriver-titus:${versions.clouddriver}"
