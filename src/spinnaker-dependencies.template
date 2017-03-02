@@ -1,7 +1,7 @@
 versions:
 # spinnaker libs
   fiat: "0.11.0"
-  kork: "1.85.0"
+  kork: "1.86.0"
   scheduledActions: "0.38.0"
   clouddriver: "1.545.0"
   front50: "1.72.0"
@@ -28,7 +28,7 @@ versions:
   httpclient: "{{org.apache.httpcomponents:httpclient}}"
   #httpcore bom: "{{org.apache.httpcomponents:httpcore}}"
   httpcore: "4.3.3"
-  jackson: "2.5.3" # "{{com.fasterxml.jackson.core:jackson-core}}"
+  jackson: "2.8.7" # "{{com.fasterxml.jackson.core:jackson-core}}"
   jedis: "2.7.3" # "{{redis.clients:jedis}}"
   junit: "{{junit:junit}}"
   lombok: "1.16.10" # "{{org.projectlombok:lombok}}"
@@ -41,7 +41,7 @@ versions:
   rxJava: "1.0.16"
   slf4j: "{{org.slf4j:slf4j-api}}"
   snappy: "{{org.xerial.snappy:snappy-java}}"
-  spectator: "0.44.0"
+  spectator: "0.52.0"
   #spock bom: "{{org.spockframework:spock-core}}"
   spock: "1.1-groovy-2.4-rc-2"
   spring: "{{org.springframework:spring-core}}"
