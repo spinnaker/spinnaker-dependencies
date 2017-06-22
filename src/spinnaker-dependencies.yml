@@ -29,7 +29,7 @@ versions:
   #httpcore bom: "{{org.apache.httpcomponents:httpcore}}"
   httpcore: "4.3.3"
   jackson: "2.8.7" # "2.4.6"
-  jedis: "2.7.3" # "2.5.2"
+  jedis: "2.8.1" # "2.5.2"
   jsonPath: "2.2.0" # "0.9.1"
   junit: "4.11"
   lombok: "1.16.10" # "1.14.8"

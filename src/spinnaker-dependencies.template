@@ -29,7 +29,7 @@ versions:
   #httpcore bom: "{{org.apache.httpcomponents:httpcore}}"
   httpcore: "4.3.3"
   jackson: "2.8.7" # "{{com.fasterxml.jackson.core:jackson-core}}"
-  jedis: "2.7.3" # "{{redis.clients:jedis}}"
+  jedis: "2.8.1" # "{{redis.clients:jedis}}"
   jsonPath: "2.2.0" # "{{com.jayway.jsonpath:json-path}}"
   junit: "{{junit:junit}}"
   lombok: "1.16.10" # "{{org.projectlombok:lombok}}"
