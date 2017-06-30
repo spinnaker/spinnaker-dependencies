@@ -16,7 +16,8 @@ versions:
   cglib: "3.2.0"
   commonsExec: "1.3"
   eureka: "1.6.2"
-  fabric8Api: "2.4.1"
+  fabric8Api: "2.2.216"
+  fabric8Client: "2.4.1"
   frigga: "0.18.0"
   googleCompute: "alpha-rev44-1.22.0"
   googleHttp: "1.20.0"
@@ -99,7 +100,7 @@ groups:
       - jacksonAnnotations
   kubernetes:
     compile:
-      - fabric8Api
+      - fabric8Client
   spockBase:
     testCompile:
       - spock
@@ -197,6 +198,7 @@ dependencies:
   commonsExec: "org.apache.commons:commons-exec:${versions.commonsExec}"
   eurekaClient: "com.netflix.eureka:eureka-client:${versions.eureka}"
   fabric8Api: "io.fabric8:kubernetes-api:${versions.fabric8Api}"
+  fabric8Client: "io.fabric8:kubernetes-client:${versions.fabric8Client}"
   frigga: "com.netflix.frigga:frigga:${versions.frigga}"
   googleCompute: "com.google.apis:google-api-services-compute:${versions.googleCompute}"
   googleHttp: "com.google.http-client:google-http-client-jackson2:${versions.googleHttp}"
