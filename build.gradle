@@ -32,7 +32,7 @@ def prop = { String name ->
 
 bintray {
   user = prop('bintrayUser')
-  key = prop('bintrayKey') 
+  key = prop('bintrayKey')
   publications = ['spinnakerDependencies']
   publish = true
   dryRun = false
@@ -67,7 +67,7 @@ task('updateDependencies', description: "Rebuilds spinnaker-dependencies.yml bas
    * Use http://platform.spring.io/platform/ as the basis for making suggested changes to spinnaker-dependencies.yml
    */
 
-  def platformVersion = '1.1.5.RELEASE' //"Athens-RELEASE"
+  def platformVersion = 'Brussels-SR3'
 
   def repo = (platformVersion.endsWith('-BUILD-SNAPSHOT')) ?
           'https://repo.spring.io/snapshot' :
