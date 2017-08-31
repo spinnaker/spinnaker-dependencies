@@ -1,7 +1,7 @@
 versions:
 # spinnaker libs
   fiat: "0.30.0"
-  kork: "1.99.0"
+  kork: "1.99.1"
   scheduledActions: "0.38.0"
   clouddriver: "1.669.0"
   front50: "1.72.0"
@@ -164,6 +164,7 @@ dependencies:
   front50S3: "com.netflix.spinnaker.front50:front50-s3:${versions.front50}"
   kork: "com.netflix.spinnaker.kork:kork-core:${versions.kork}"
   korkCassandra: "com.netflix.spinnaker.kork:kork-cassandra:${versions.kork}"
+  korkArtifacts: "com.netflix.spinnaker.kork:kork-artifacts:${versions.kork}"
   korkExceptions: "com.netflix.spinnaker.kork:kork-exceptions:${versions.kork}"
   korkJedisTest: "com.netflix.spinnaker.kork:kork-jedis-test:${versions.kork}"
   korkSecurity: "com.netflix.spinnaker.kork:kork-security:${versions.kork}"
