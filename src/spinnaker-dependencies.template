@@ -74,6 +74,7 @@ groups:
       - bootActuator
       - bootWeb
       - bootDataRest
+      - logstashEncoder
   cassandra:
     compile:
       - astyanaxCql
