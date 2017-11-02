@@ -218,7 +218,7 @@ dependencies:
   hamcrestCore: "org.hamcrest:hamcrest-core:${versions.hamcrest}"
   httpclient: "org.apache.httpcomponents:httpclient:${versions.httpclient}"
   httpcore: "org.apache.httpcomponents:httpcore:${versions.httpcore}"
-  jacksonAnnotations: "com.fasterxml.jackson.core:jackson-databind:${versions.jackson}"
+  jacksonAnnotations: "com.fasterxml.jackson.core:jackson-annotations:${versions.jackson}"
   jacksonCore: "com.fasterxml.jackson.core:jackson-core:${versions.jackson}"
   jacksonDatabind: "com.fasterxml.jackson.core:jackson-databind:${versions.jackson}"
   jacksonGuava: "com.fasterxml.jackson.datatype:jackson-datatype-guava:${versions.jackson}"
