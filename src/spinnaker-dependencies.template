@@ -1,7 +1,7 @@
 versions:
 # spinnaker libs
   fiat: "0.34.0"
-  kork: "1.108.0"
+  kork: "1.109.0"
   scheduledActions: "0.38.0"
   clouddriver: "1.684.0"
   front50: "1.72.0"
@@ -14,7 +14,7 @@ versions:
   cglib: "3.2.0"
   commonsExec: "1.3"
   dynomite: "1.6.0-rc.2"
-  eureka: "1.8.0"
+  eureka: "1.8.6"
   fabric8Api: "2.2.216"
   fabric8Client: "3.0.3"
   frigga: "0.18.0"
