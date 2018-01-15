@@ -25,6 +25,7 @@ versions:
   groovy: "2.4.12"
   guava: "20.0"
   hamcrest: "1.3"
+  hamkrest: "1.4.2.2"
   httpclient: "4.5.3"
   #httpcore bom: "4.4.6"
   httpcore: "4.3.3"
@@ -32,9 +33,13 @@ versions:
   jedis: "2.9.0" # "2.9.0"
   jsonPath: "2.2.0" # "2.2.0"
   junit: "4.12"
+  junit5: "1.0.2"
+  jupiter: "5.0.2"
+  kotlin: "1.2.0"
   lombok: "1.16.10" # "1.16.18"
   logback: "1.1.7"
   logstash: "4.10"
+  mockitoKotlin: "1.5.0"
   objenesis: "2.5.1"
   #okhttp bom: "2.7.5"
   okHttp: "2.7.0"
@@ -44,6 +49,7 @@ versions:
   slf4j: "1.7.25"
   snappy: "1.1.2.6"
   spectator: "0.57.1"
+  spek: "1.1.5"
   #spock bom: "1.0-groovy-2.4"
   spock: "1.1-groovy-2.4"
   spring: "4.3.11.RELEASE"
@@ -108,6 +114,19 @@ groups:
       - spock
       - cglib
       - objenesis
+  spek:
+    testCompile:
+      - junitPlatformRunner
+      - spekApi
+      - spekSubjectExtension
+      - mockitoKotlin
+      - hamkrest
+      - junitJupiterApi
+    testRuntime:
+      - junitPlatformLauncher
+      - junitJupiterEngine
+      - junitVintageEngine
+      - spekJunitPlatformEngine
   retrofitDefault:
     compile:
       - retrofit
@@ -207,6 +226,7 @@ dependencies:
   groovy: "org.codehaus.groovy:groovy-all:${versions.groovy}"
   guava: "com.google.guava:guava:${versions.guava}"
   hamcrestCore: "org.hamcrest:hamcrest-core:${versions.hamcrest}"
+  hamkrest: "com.natpryce:hamkrest:${versions.hamkrest}"
   httpclient: "org.apache.httpcomponents:httpclient:${versions.httpclient}"
   httpcore: "org.apache.httpcomponents:httpcore:${versions.httpcore}"
   jacksonAnnotations: "com.fasterxml.jackson.core:jackson-annotations:${versions.jackson}"
@@ -218,9 +238,15 @@ dependencies:
   jacksonLombok: "com.xebia:jackson-lombok:1.0"
   jedis: "redis.clients:jedis:${versions.jedis}"
   junit: "junit:junit:${versions.junit}"
+  junitJupiterApi: "org.junit.jupiter:junit-jupiter-api:${versions.jupiter}"
+  junitJupiterEngine: "org.junit.jupiter:junit-jupiter-engine:${versions.jupiter}"
+  junitPlatformRunner: "org.junit.platform:junit-platform-runner:${versions.junit5}"
+  junitPlatformLauncher: "org.junit.platform:junit-platform-launcher:${versions.junit5}"
+  junitVintageEngine: "org.junit.vintage:junit-vintage-engine:${versions.junit}"
   lombok: "org.projectlombok:lombok:${versions.lombok}"
   logbackClassic: "ch.qos.logback:logback-classic:${versions.logback}"
   logstashEncoder: "net.logstash.logback:logstash-logback-encoder:${versions.logstash}"
+  mockitoKotlin: "com.nhaarman:mockito-kotlin:versions.mockitoKotlin"
   objenesis: "org.objenesis:objenesis:${versions.objenesis}"
   okHttp: "com.squareup.okhttp:okhttp:${versions.okHttp}"
   okHttpUrlconnection: "com.squareup.okhttp:okhttp-urlconnection:${versions.okHttp}"
@@ -236,6 +262,9 @@ dependencies:
   spectatorJvm: "com.netflix.spectator:spectator-ext-jvm:${versions.spectator}"
   spectatorReg: "com.netflix.spectator:spectator-reg-metrics3:${versions.spectator}"
   spectatorWebSpring: "com.netflix.spectator:spectator-web-spring:${versions.spectator}"
+  spekApi: "org.jetbrains.spek:spek-api:${versions.spek}"
+  spekSubjectExtension: "org.jetbrains.spek:spek-subject-extension:${versions.spek}"
+  spekJunitPlatformEngine: "org.jetbrains.spek:spek-junit-platform-engine:${versions.spek}"
   slf4j: "org.slf4j:jcl-over-slf4j:${versions.slf4j}"
   slf4jApi: "org.slf4j:slf4j-api:${versions.slf4j}"
   slf4jSimple: "org.slf4j:slf4j-simple:${versions.slf4j}"
