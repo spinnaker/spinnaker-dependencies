@@ -38,7 +38,7 @@ versions:
   kotlin: "1.2.0"
   lombok: "1.16.10" # "{{org.projectlombok:lombok}}"
   logback: "1.1.7"
-  logstash: "4.10"
+  logstash: "4.11"
   mockitoKotlin: "1.5.0"
   objenesis: "{{org.objenesis:objenesis}}"
   #okhttp bom: "{{com.squareup.okhttp:okhttp}}"
