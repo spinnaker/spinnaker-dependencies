@@ -67,7 +67,7 @@ task('updateDependencies', description: "Rebuilds spinnaker-dependencies.yml bas
    * Use http://platform.spring.io/platform/ as the basis for making suggested changes to spinnaker-dependencies.yml
    */
 
-  def platformVersion = 'Brussels-SR6'
+  def platformVersion = 'Brussels-SR7'
 
   def repo = (platformVersion.endsWith('-BUILD-SNAPSHOT')) ?
           'https://repo.spring.io/snapshot' :
