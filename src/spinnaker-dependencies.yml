@@ -78,7 +78,6 @@ groups:
     compile:
       - bootActuator
       - bootWeb
-      - bootDataRest
       - logstashEncoder
   cassandra:
     compile:
@@ -95,7 +94,6 @@ groups:
     compileOnly:
       - bootActuator
       - bootWeb
-      - bootDataRest
   google:
     compile:
       - googleCompute
