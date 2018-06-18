@@ -1,7 +1,7 @@
 versions:
 # spinnaker libs
-  fiat: "0.44.0"
-  kork: "1.134.0"
+  fiat: "0.45.3"
+  kork: "1.135.0"
   scheduledActions: "0.39.0"
   clouddriver: "1.762.0"
   front50: "1.72.0"
@@ -14,7 +14,7 @@ versions:
   cglib: "3.2.0"
   commonsExec: "1.3"
   dynomite: "1.6.3-rc.10"
-  eureka: "1.8.6"
+  eureka: "1.9.2"
   fabric8Api: "2.2.216"
   fabric8Client: "3.0.3"
   frigga: "0.18.0"
@@ -50,7 +50,7 @@ versions:
   rxJava: "1.3.8"
   slf4j: "{{org.slf4j:slf4j-api}}"
   snappy: "{{org.xerial.snappy:snappy-java}}"
-  spectator: "0.68.0"
+  spectator: "0.70.2"
   spek: "1.1.5"
   #spock bom: "{{org.spockframework:spock-core}}"
   spock: "1.1-groovy-2.4"
