@@ -1,7 +1,7 @@
 versions:
 # spinnaker libs
   fiat: "0.45.3"
-  kork: "1.135.0"
+  kork: "1.135.1"
   scheduledActions: "0.39.0"
   clouddriver: "1.762.0"
   front50: "1.72.0"
@@ -32,7 +32,7 @@ versions:
   jackson: "2.9.2" # "2.8.10"
   jedis: "2.9.0" # "2.9.0"
   jsonPath: "2.2.0" # "2.2.0"
-  junit: "4.12"
+  junit: "4.12.3" # "4.12"
   junit5: "1.0.2"
   jupiter: "5.0.2"
   kotlin: "1.2.0"

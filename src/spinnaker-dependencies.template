@@ -32,7 +32,7 @@ versions:
   jackson: "2.9.2" # "{{com.fasterxml.jackson.core:jackson-core}}"
   jedis: "2.9.0" # "{{redis.clients:jedis}}"
   jsonPath: "2.2.0" # "{{com.jayway.jsonpath:json-path}}"
-  junit: "{{junit:junit}}"
+  junit: "4.12.3" # "{{junit:junit}}"
   junit5: "1.0.2"
   jupiter: "5.0.2"
   kotlin: "1.2.0"
