@@ -1,7 +1,7 @@
 versions:
 # spinnaker libs
   fiat: "0.45.3"
-  kork: "1.135.0"
+  kork: "1.135.1"
   scheduledActions: "0.39.0"
   clouddriver: "1.762.0"
   front50: "1.72.0"
