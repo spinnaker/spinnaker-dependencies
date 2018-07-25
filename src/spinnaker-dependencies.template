@@ -16,7 +16,7 @@ versions:
   dynomite: "1.6.3-rc.10"
   eureka: "1.9.2"
   fabric8Api: "2.2.216"
-  fabric8Client: "3.0.3"
+  fabric8Client: "4.0.0"
   frigga: "0.18.0"
   googleCompute: "alpha-rev57-1.23.0"
   googleHttp: "1.23.0"
