@@ -36,7 +36,7 @@ versions:
   junitVintage: "4.12.3"
   junit5: "1.0.2"
   jupiter: "5.0.2"
-  kotlin: "1.2.0"
+  kotlin: "1.2.71"
   lombok: "1.16.20" # "1.16.20"
   logback: "1.1.7"
   logstash: "4.11"
