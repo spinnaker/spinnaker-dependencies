@@ -8,6 +8,7 @@ versions:
 # third party
   akka: "2.3.9"
   archaius: "0.7.5"
+  assertj: "3.11.1"
   astyanax: "3.8.0"
   aws: "1.11.409"
   awsObjectMapper: "1.11.409"
@@ -199,6 +200,7 @@ dependencies:
   akkaPersistence: "com.typesafe.akka:akka-persistence-experimental_2.11:${versions.akka}"
   akkaActorTests: "com.typesafe.akka:akka-actor-tests_2.11:${versions.akka}"
   archaiusCore: "com.netflix.archaius:archaius-core:${versions.archaius}"
+  assertj: "org.assertj:assertj-core:${versions.assertj}"
   astyanaxCassandra: "com.netflix.astyanax:astyanax-cassandra:${versions.astyanax}"
   astyanaxCql: "com.netflix.astyanax:astyanax-cql:${versions.astyanax}"
   astyanaxThrift: "com.netflix.astyanax:astyanax-thrift:${versions.astyanax}"
