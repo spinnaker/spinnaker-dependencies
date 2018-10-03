@@ -59,6 +59,7 @@ versions:
   spring: "{{org.springframework:spring-core}}"
   springBoot: "{{org.springframework.boot:spring-boot}}"
   springSecurity: "{{org.springframework.security:spring-security-core}}"
+  ulid: "8.2.0"
 
 groups:
   akka:
@@ -287,3 +288,4 @@ dependencies:
   springSecurityCore: "org.springframework.security:spring-security-core:${versions.springSecurity}"
   springSecurityWeb: "org.springframework.security:spring-security-web:${versions.springSecurity}"
   springTest: "org.springframework:spring-test:${versions.spring}"
+  ulid: "de.huxhorn.sulky:de.huxhorn.sulky.ulid:${versions.ulid}"
