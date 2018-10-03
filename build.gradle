@@ -1,11 +1,16 @@
 buildscript {
-    repositories { jcenter() }
+    repositories {
+      jcenter()
+      maven { url "http://spinnaker.bintray.com/gradle" }
+    }
     dependencies {
         classpath 'com.jfrog.bintray.gradle:gradle-bintray-plugin:1.4'
         classpath 'com.netflix.nebula:nebula-release-plugin:3.1.0'
+        classpath 'com.netflix.spinnaker.gradle:spinnaker-dependency-bump-plugin:5.0.0'
     }
 }
 
+apply plugin: 'idea'
 apply plugin: 'nebula.nebula-release'
 apply plugin: 'com.jfrog.bintray'
 apply plugin: 'maven-publish'
@@ -103,3 +108,4 @@ tasks.bintrayUpload.dependsOn(build)
 tasks.publishToMavenLocal.dependsOn(build)
 tasks.release.dependsOn(updateDependencies, bintrayUpload)
 
+apply plugin: com.netflix.spinnaker.gradle.dependency.SpinnakerDependencyBumpPlugin

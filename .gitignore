@@ -2,5 +2,8 @@
 /build/
 .idea
 *.iml
+*.ipr
+*.iws
 .project
 .settings
+clones/
