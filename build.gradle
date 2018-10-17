@@ -6,7 +6,7 @@ buildscript {
     dependencies {
         classpath 'com.jfrog.bintray.gradle:gradle-bintray-plugin:1.8.4'
         classpath 'com.netflix.nebula:nebula-release-plugin:3.1.0'
-        classpath 'com.netflix.spinnaker.gradle:spinnaker-dependency-bump-plugin:5.1.0'
+        classpath 'com.netflix.spinnaker.gradle:spinnaker-dependency-bump-plugin:5.1.1'
     }
 }
 
