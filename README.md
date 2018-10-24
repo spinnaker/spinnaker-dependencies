@@ -11,6 +11,6 @@ The ``build/spinnaker-dependencies.yml`` is published as an artifact to the bint
 To generate a new version run:
 
 ````
-./gradlew updateDependencies final release
+./gradlew updateDependencies
 ````
 
