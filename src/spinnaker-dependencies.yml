@@ -10,7 +10,7 @@ versions:
   archaius: "0.7.5"
   assertj: "3.11.1"
   astyanax: "3.8.0"
-  aws: "1.11.409"
+  aws: "1.11.469"
   awsObjectMapper: "1.11.409"
   cglib: "3.2.0"
   commonsExec: "1.3"
