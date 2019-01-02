@@ -33,7 +33,7 @@ versions:
   httpcore: "4.3.3"
   jackson: "2.9.2" # "2.8.11"
   jedis: "2.9.0" # "2.9.0"
-  jinjava: "2.2.3"
+  jinjava: "2.4.12"
   jsonPath: "2.2.0" # "2.2.0"
   junit: "4.12"
   junitVintage: "4.12.3"
