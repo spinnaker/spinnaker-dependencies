@@ -190,6 +190,7 @@ dependencies:
   korkExceptions: "com.netflix.spinnaker.kork:kork-exceptions:${versions.kork}"
   korkJedis: "com.netflix.spinnaker.kork:kork-jedis:${versions.kork}"
   korkJedisTest: "com.netflix.spinnaker.kork:kork-jedis-test:${versions.kork}"
+  korkSecrets: "com.netflix.spinnaker.kork:kork-secrets:${versions.kork}"
   korkSecurity: "com.netflix.spinnaker.kork:kork-security:${versions.kork}"
   korkSql: "com.netflix.spinnaker.kork:kork-sql:${versions.kork}"
   korkSqlTest: "com.netflix.spinnaker.kork:kork-sql-test:${versions.kork}"
