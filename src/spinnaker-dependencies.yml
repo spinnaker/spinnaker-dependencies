@@ -20,8 +20,8 @@ versions:
   fabric8Api: "2.2.216"
   fabric8Client: "4.0.0"
   frigga: "0.18.0"
+  googleApiClient: "1.28.0"
   googleCompute: "alpha-rev57-1.23.0"
-  googleHttp: "1.23.0"
   googleMonitoring: "v3-rev477-1.25.0"
   googleStorage: "v1-rev141-1.25.0"
   groovy: "2.4.15"
@@ -102,11 +102,6 @@ groups:
     compileOnly:
       - bootActuator
       - bootWeb
-  google:
-    compile:
-      - googleCompute
-      - googleHttp
-      - googleStorage
   jackson:
     compile:
       - jacksonCore
@@ -235,8 +230,8 @@ dependencies:
   fabric8Api: "io.fabric8:kubernetes-api:${versions.fabric8Api}"
   fabric8Client: "io.fabric8:kubernetes-client:${versions.fabric8Client}"
   frigga: "com.netflix.frigga:frigga:${versions.frigga}"
+  googleApiClient: "com.google.api-client:google-api-client:${versions.googleApiClient}"
   googleCompute: "com.google.apis:google-api-services-compute:${versions.googleCompute}"
-  googleHttp: "com.google.http-client:google-http-client-jackson2:${versions.googleHttp}"
   googleMonitoring: "com.google.apis:google-api-services-monitoring:${versions.googleMonitoring}"
   googleStorage: "com.google.apis:google-api-services-storage:${versions.googleStorage}"
   groovy: "org.codehaus.groovy:groovy-all:${versions.groovy}"
