@@ -45,6 +45,7 @@ versions:
   logback: "1.2.3"
   logstash: "4.11"
   mockitoKotlin: "1.5.0"
+  moniker: "0.2.0"
   objenesis: "{{org.objenesis:objenesis}}"
   #okhttp bom: "{{com.squareup.okhttp:okhttp}}"
   okHttp: "2.7.0"
