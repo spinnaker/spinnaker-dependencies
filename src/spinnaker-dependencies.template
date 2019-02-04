@@ -34,7 +34,7 @@ versions:
   jackson: "2.9.2" # "{{com.fasterxml.jackson.core:jackson-core}}"
   jedis: "2.9.0" # "{{redis.clients:jedis}}"
   jinjava: "2.4.12"
-  jooq: "3.11.9"
+  jooq: "3.9.6"
   jsonPath: "2.2.0" # "{{com.jayway.jsonpath:json-path}}"
   junit: "{{junit:junit}}"
   junitVintage: "4.12.3"
