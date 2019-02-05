@@ -171,7 +171,7 @@ dependencies:
   clouddriverAppengine: "com.netflix.spinnaker.clouddriver:clouddriver-appengine:${versions.clouddriver}"
   clouddriverAws: "com.netflix.spinnaker.clouddriver:clouddriver-aws:${versions.clouddriver}"
   clouddriverAzure: "com.netflix.spinnaker.clouddriver:clouddriver-azure:${versions.clouddriver}"
-  clouddriverCf: "com.netflix.spinnaker.clouddriver:clouddriver-cf:${versions.clouddriver}"
+  clouddriverCloudfoundry: "com.netflix.spinnaker.clouddriver:clouddriver-cloudfoundry:${versions.clouddriver}"
   clouddriverDocker: "com.netflix.spinnaker.clouddriver:clouddriver-docker:${versions.clouddriver}"
   clouddriverGoogle: "com.netflix.spinnaker.clouddriver:clouddriver-google:${versions.clouddriver}"
   clouddriverGoogleCommon: "com.netflix.spinnaker.clouddriver:clouddriver-google-common:${versions.clouddriver}"
