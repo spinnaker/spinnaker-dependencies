@@ -3,7 +3,7 @@ versions:
   fiat: "0.54.1"
   kork: "3.6.0"
   scheduledActions: "0.39.0"
-  clouddriver: "2.110.1"
+  clouddriver: "2.114.4"
   front50: "1.139.0"
 # third party
   akka: "2.3.9"
