@@ -21,7 +21,7 @@ versions:
   fabric8Client: "4.0.0"
   frigga: "0.18.0"
   googleApiClient: "1.28.0"
-  googleCompute: "alpha-rev57-1.23.0"
+  googleCompute: "beta-rev107-1.25.0"
   googleMonitoring: "v3-rev477-1.25.0"
   googleStorage: "v1-rev141-1.25.0"
   groovy: "2.4.15"
