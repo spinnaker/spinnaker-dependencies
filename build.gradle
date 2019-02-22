@@ -1,14 +1,20 @@
 buildscript {
     repositories {
       jcenter()
-      maven { url "http://spinnaker.bintray.com/gradle" }
+      maven { url "https://spinnaker.bintray.com/gradle" }
+      maven { url "https://plugins.gradle.org/m2/" }
     }
     dependencies {
         classpath 'com.jfrog.bintray.gradle:gradle-bintray-plugin:1.8.4'
         classpath 'com.netflix.nebula:nebula-release-plugin:8.0.3'
         classpath 'com.netflix.spinnaker.gradle:spinnaker-dependency-bump-plugin:5.2.1'
+
+        classpath "org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}"
     }
 }
+
+apply plugin: 'org.springframework.boot'
+apply plugin: 'io.spring.dependency-management'
 
 apply plugin: 'idea'
 apply plugin: 'nebula.nebula-release'
@@ -18,6 +24,10 @@ apply plugin: 'maven'
 
 group = 'com.netflix.spinnaker'
 description = 'Common dependencies for Spinnaker'
+
+repositories {
+  maven { url "https://plugins.gradle.org/m2/" }
+}
 
 release {
   defaultVersionStrategy = nebula.plugin.release.NetflixOssStrategies.SNAPSHOT
@@ -65,37 +75,16 @@ project.gradle.taskGraph.whenReady { graph ->
   }
 }
 
-
-task('updateDependencies', description: "Rebuilds spinnaker-dependencies.yml based on Spring's platform BOM.") << {
-
-  /*
-   * Use http://platform.spring.io/platform/ as the basis for making suggested changes to spinnaker-dependencies.yml
-   */
-
-  def platformVersion = 'Brussels-SR14'
-
-  def repo = (platformVersion.endsWith('-BUILD-SNAPSHOT')) ?
-          'https://repo.spring.io/snapshot' :
-          (platformVersion.contains('-RC') || platformVersion.contains('-M')) ?
-                  'https://repo.spring.io/milestone' :
-                  'https://repo.spring.io/release'
-  def group = "io.spring.platform".replaceAll('\\.', '/')
-  def artifact = "platform-bom"
-  def path = "${repo}/${group}/${artifact}/${platformVersion}/${artifact}-${platformVersion}.properties"
-
-  println "Fetching ${platformVersion} platform from ${path}..."
-
-  Properties props = new Properties()
-  path.toURL().openStream().withStream { propertyStream ->
-    props.load(propertyStream)
-  }
+task('updateDependencies', description: "Rebuilds spinnaker-dependencies.yml based on Spring Boot's BOM.") << {
+  def deps = dependencyManagement.importedProperties
+  deps['spring-boot.version'] = springBootVersion
 
   def updatedListOfDeps = new File('src/spinnaker-dependencies.template').text
 
-  println "Updating version settings based on ${platformVersion}..."
+  println "Updating version settings based on ${springBootVersion}..."
 
-  props.keySet().each { lib ->
-    updatedListOfDeps = updatedListOfDeps.replaceAll('\\{\\{' + lib + '}}', props.getProperty(lib))
+  deps.keySet().each { lib ->
+    updatedListOfDeps = updatedListOfDeps.replaceAll('\\{\\{' + lib + '}}', deps[lib])
   }
 
   new File('src/spinnaker-dependencies.yml').withWriter { writer ->
