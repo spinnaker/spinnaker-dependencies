@@ -239,7 +239,7 @@ dependencies:
   googleMonitoring: "com.google.apis:google-api-services-monitoring:${versions.googleMonitoring}"
   googleStorage: "com.google.apis:google-api-services-storage:${versions.googleStorage}"
   groovy: "org.codehaus.groovy:groovy-all:${versions.groovy}"
-  guava: "com.github.ben-manes.caffeine:${versions.guava}"
+  guava: "com.github.ben-manes.caffeine:guava:${versions.guava}"
   hamcrestCore: "org.hamcrest:hamcrest-core:${versions.hamcrest}"
   hamkrest: "com.natpryce:hamkrest:${versions.hamkrest}"
   httpclient: "org.apache.httpcomponents:httpclient:${versions.httpclient}"
