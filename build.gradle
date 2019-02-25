@@ -65,13 +65,10 @@ project.gradle.taskGraph.whenReady { graph ->
   }
 }
 
-
-task('updateDependencies', description: "Rebuilds spinnaker-dependencies.yml based on Spring's platform BOM.") << {
-
+ext.fetchDependencies = {
   /*
    * Use http://platform.spring.io/platform/ as the basis for making suggested changes to spinnaker-dependencies.yml
    */
-
   def platformVersion = 'Brussels-SR14'
 
   def repo = (platformVersion.endsWith('-BUILD-SNAPSHOT')) ?
@@ -98,12 +95,26 @@ task('updateDependencies', description: "Rebuilds spinnaker-dependencies.yml bas
     updatedListOfDeps = updatedListOfDeps.replaceAll('\\{\\{' + lib + '}}', props.getProperty(lib))
   }
 
+  return updatedListOfDeps
+}
+
+task('checkDependencies', description: "Checks that spinnaker-dependencies.yml is currently up to date.") << {
+  def updatedDeps = fetchDependencies()
+
+  def currentDeps = new File('src/spinnaker-dependencies.yml').text
+  if (currentDeps != updatedDeps) {
+    throw new GradleException('spinnaker-dependencies.yml is out of date. Regenerate it by running the updateDependencies gradle task.')
+  }
+}
+
+task('updateDependencies', description: "Rebuilds spinnaker-dependencies.yml based on Spring's platform BOM.") << {
+  def updatedListOfDeps = fetchDependencies()
   new File('src/spinnaker-dependencies.yml').withWriter { writer ->
     writer.write(updatedListOfDeps)
   }
 }
 
-tasks.build.dependsOn(updateDependencies)
+tasks.check.dependsOn(checkDependencies)
 tasks.bintrayUpload.dependsOn(build)
 tasks.publishToMavenLocal.dependsOn(build)
 tasks.release.dependsOn(updateDependencies, bintrayUpload)
