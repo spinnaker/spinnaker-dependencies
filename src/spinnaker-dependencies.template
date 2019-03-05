@@ -62,7 +62,7 @@ versions:
   snappy: "1.1.2.6"
   spectator: "0.85.0"
   spek: "1.1.5"
-  spock: "1.1-groovy-2.4"
+  spock: "1.2-groovy-2.5"
   spring: "{{spring.version}}"
   springBoot: "{{spring-boot.version}}"
   springSecurity: "{{spring-security.version}}"
