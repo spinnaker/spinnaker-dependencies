@@ -29,6 +29,7 @@ versions:
   gson: "{{gson.version}}"
   hamcrest: "{{hamcrest.version}}"
   hamkrest: "1.4.2.2"
+  hikari: "3.2.0"
   httpclient: "{{httpclient.version}}"
   httpcore: "{{httpcore.version}}"
   jackson: "{{jackson.version}}"
