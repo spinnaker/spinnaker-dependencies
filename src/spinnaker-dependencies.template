@@ -1,7 +1,7 @@
 versions:
 # spinnaker libs
   fiat: "0.54.1"
-  kork: "4.0.0-rc.8-springBoot2"
+  kork: "4.0.0-rc.9-springBoot2"
   scheduledActions: "0.39.0"
   clouddriver: "2.114.4"
   front50: "1.139.0"
