@@ -66,6 +66,8 @@ versions:
   spock: "1.1-groovy-2.4"
   spring: "{{org.springframework:spring-core}}"
   springBoot: "{{org.springframework.boot:spring-boot}}"
+  springCloudContext: "1.3.5.RELEASE"
+  springCloudConfigServer: "1.4.6.RELEASE"
   springSecurity: "{{org.springframework.security:spring-security-core}}"
   ulid: "8.2.0"
 
@@ -296,6 +298,8 @@ dependencies:
   spock: "org.spockframework:spock-core:${versions.spock}"
   spockSpring: "org.spockframework:spock-spring:${versions.spock}"
   springBeans: "org.springframework:spring-beans:${versions.spring}"
+  springCloudContext: "org.springframework.cloud:spring-cloud-context:${versions.springCloudContext}"
+  springCloudConfigServer: "org.springframework.cloud:spring-cloud-config-server:${versions.springCloudConfigServer}"
   springContext: "org.springframework:spring-context:${versions.spring}"
   springSecurityConfig: "org.springframework.security:spring-security-config:${versions.springSecurity}"
   springSecurityCore: "org.springframework.security:spring-security-core:${versions.springSecurity}"
